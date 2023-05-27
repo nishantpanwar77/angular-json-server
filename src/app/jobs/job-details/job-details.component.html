@@ -1,0 +1,38 @@
+<div class="p-3 shadow w-100 d-flex justify-content-between">
+  <h4>Job Details</h4>
+</div>
+<div class="shadow-sm mx-3 mt-4 p-3">
+  <form (submit)="submitForm()">
+    <div class="mb-3">
+      <label for="jobNumber">Job Number:</label>
+      <input type="text" class="form-control" placeholder="Enter Job Number" [(ngModel)]="job.job_number" name="jobNumber" required>
+    </div>
+    <div class="mb-3">
+      <label for="jobTitle">Job Title:</label>
+      <input type="text" class="form-control" placeholder="Enter Job Title" [(ngModel)]="job.job_title" name="jobTitle" required>
+    </div>
+    <div class="mb-2">
+      <label for="startDate">Start Date:</label>
+      <input type="date" class="form-control" [(ngModel)]="job.job_start_date" name="startDate" required>
+    </div>
+    <div class="mb-2">
+      <label for="closeDate">Close Date:</label>
+      <input type="date" class="form-control" [(ngModel)]="job.job_close_date" name="closeDate" required>
+    </div>
+    <div class="mb-2">
+      <label for="experienceRequired">Experience Required:</label>
+        <input class="ms-2 form-check-input position-static" type="checkbox" [(ngModel)]="job.experience_required" name="experienceRequired">
+    </div>
+    <div class="mb-2">
+      <label for="openings">Number of Openings:</label>
+      <input type="number" class="form-control" placeholder="Enter Number of Openings" [(ngModel)]="job.number_of_openings" name="openings" required>
+    </div>
+    <div class="mb-2">
+      <label for="notes">Job Notes:</label>
+      <textarea class="form-control" placeholder="Enter Job Notes" [(ngModel)]="job.job_notes" name="notes" rows="4"></textarea>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success shadow">Update</button>
+    </div>
+  </form>
+</div>

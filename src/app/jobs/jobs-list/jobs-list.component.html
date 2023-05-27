@@ -1,0 +1,27 @@
+<div class="p-3 shadow w-100 d-flex justify-content-between">
+  <h4>Jobs</h4>
+  <button routerLink="/jobs/new" class="btn btn-primary">Create Job</button>
+</div>
+
+<div class="shadow-sm mx-3 mt-4">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Job Number</th>
+        <th>Job Title</th>
+        <th>Start Date</th>
+        <th>Close Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="onRow" *ngFor="let job of jobs" [routerLink]="['/jobs', job.id]">
+        <td>{{ job.id }}</td>
+        <td>{{ job.job_number }}</td>
+        <td>{{ job.job_title }}</td>
+        <td>{{ job.job_start_date }}</td>
+        <td>{{ job.job_close_date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
